@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "gobble/tobi/parser"
+
+Gobble::Tobi::Parser.parse

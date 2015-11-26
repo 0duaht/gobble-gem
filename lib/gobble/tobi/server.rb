@@ -21,7 +21,7 @@ module Gobble
         if res.is_a?(Net::HTTPSuccess)
           actual_response = res.body
         end
-        puts actual_response 
+        actual_response 
       end
     end
     

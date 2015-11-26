@@ -115,15 +115,16 @@ describe "Opt Process" do
     end
   end
   
-  # describe "Process#process" do
-    # let(:options) { { save: true, full_url: url, short_url: short, key: key } }
-    # subject do
-      # Gobble::Tobi::Process.new(options)
-    # end
-#     
-    # it "goes smoothly when args are correct" do
-      # subject.process
-    # end
-  # end
+  describe "Process#process" do
+    let(:options) { { save: true, full_url: url, short_url: short, key: key } }
+    subject do
+      Gobble::Tobi::Process.new(options)
+    end
+    
+    it "goes smoothly when args are correct" do
+      expect(STDOUT).to receive(:puts).with("Link generated successfully. #{Gobble::Tobi::Constants::FULL_URL}/#{short}")
+      subject.process
+    end
+  end
   
 end

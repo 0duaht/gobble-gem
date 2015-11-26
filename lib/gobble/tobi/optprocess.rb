@@ -19,7 +19,7 @@ module Gobble
         store_key(options, values)
         store_url(options, values)
         
-        Gobble::Tobi::ServerGateway.new(values).communicate
+        puts Gobble::Tobi::ServerGateway.new(values).communicate
       end
       
       def save_key(options, values)

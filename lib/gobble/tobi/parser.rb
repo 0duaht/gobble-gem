@@ -52,6 +52,3 @@ module Gobble
     end
   end
 end
-
-
-Gobble::Tobi::Parser.new.parse

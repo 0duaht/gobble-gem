@@ -2,4 +2,4 @@
 
 require "gobble/tobi/parser"
 
-Gobble::Tobi::Parser.parse
+Gobble::Tobi::Parser.new.parse

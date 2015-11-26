@@ -14,4 +14,7 @@ describe "Server" do
     end
   end
   
+  describe "Server#communicate" do
+    
+  end
 end

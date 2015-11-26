@@ -1,5 +1,6 @@
-require "./optprocess"
-require "./server"
+require "gobble/tobi/optprocess"
+require "gobble/tobi/server"
+require "gobble/tobi/constants"
 require "optparse"
 
 module Gobble

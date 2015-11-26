@@ -1,5 +1,5 @@
 require "net/http"
-require "./constants"
+require "gobble/tobi/constants"
 
 module Gobble
   module Tobi

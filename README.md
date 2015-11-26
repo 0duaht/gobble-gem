@@ -2,7 +2,8 @@
 [![Code Climate](https://codeclimate.com/github/andela-toduah/gobble-gem/badges/gpa.svg)](https://codeclimate.com/github/andela-toduah/gobble-gem) [![Test Coverage](https://codeclimate.com/github/andela-toduah/gobble-gem/badges/coverage.svg)](https://codeclimate.com/github/andela-toduah/gobble-gem/coverage)
 
 ## Features
-Ruby gem to interface with the Gobble-It API. API available at http://gobble-it.herokuapp.com.
+Ruby gem to interface with the Gobble-It API. API available at http://gobble-it.herokuapp.com/api.
+
 It allows you create URLs by passing in parameters while running the gem.
 
 ## Limitations

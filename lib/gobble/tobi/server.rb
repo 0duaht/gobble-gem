@@ -13,11 +13,15 @@ module Gobble
       end
       
       def communicate
+        actual_response = nil
         uri = URI(FULL_URL + "/api/create")
         uri.query = URI.encode_www_form(values)
         
         res = Net::HTTP.get_response(uri)
-        puts res.body if res.is_a?(Net::HTTPSuccess)
+        if res.is_a?(Net::HTTPSuccess)
+          actual_response = res.body
+        end
+        puts actual_response 
       end
     end
     

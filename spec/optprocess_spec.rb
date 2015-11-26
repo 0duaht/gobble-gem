@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "Opt Process" do
   let(:file_name) { "gobble_api_key.gb" }
   let(:key) { "testkey" }
+  let(:right_key) { "6kNm06638zuPYmplv6juCBNeQ2tdu9Q_fo6dmXgyCBFHROB-Xjl4RxWg636ALBY6" }
   let(:short) { "testshort" }
   let(:url) { "http://trialtest.com" }
   
@@ -116,7 +117,7 @@ describe "Opt Process" do
   end
   
   describe "Process#process" do
-    let(:options) { { save: true, full_url: url, short_url: short, key: key } }
+    let(:options) { { save: true, full_url: url, short_url: short, key: right_key } }
     subject do
       Gobble::Tobi::Process.new(options)
     end

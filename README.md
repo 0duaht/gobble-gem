@@ -21,9 +21,13 @@ To install, execute:
 Options in round brackets are optional.
 
 -f full_url     (full_url represents full_url to be shortened)
+
 -s short_url    (short_url represents custom short link. Optional. If not passed in, a unique one is generated)
+
 -k api_key      (api_key gotten from user account. Sign up on http://gobble-it.heroku.com for yours.)
+
 --save          (to save api key on your PC.)
+
 -h              (to show help message)
     
 ## Testing

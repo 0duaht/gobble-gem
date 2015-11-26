@@ -1,4 +1,5 @@
 require "gobble/tobi/constants"
+require "gobble/tobi/server"
 
 module Gobble
   module Tobi

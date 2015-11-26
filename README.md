@@ -1,41 +1,57 @@
-# Gobble
+# Gobble-Gem
+[![Code Climate](https://codeclimate.com/github/andela-toduah/gobble-gem/badges/gpa.svg)](https://codeclimate.com/github/andela-toduah/gobble-gem) [![Test Coverage](https://codeclimate.com/github/andela-toduah/gobble-gem/badges/coverage.svg)](https://codeclimate.com/github/andela-toduah/gobble-gem/coverage)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gobble`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Features
+Ruby gem to interface with the Gobble-It API. API available at http://gobble-it.herokuapp.com.
+It allows you create URLs by passing in parameters while running the gem.
 
-TODO: Delete this and the text above, and describe your gem
+## Limitations
+Currently, the gem only allows you create URLs. It does not let you obtain your user details or any other information.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'gobble'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+To install, execute:
 
     $ gem install gobble
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ gobble -f [full_url] (-s [short_url]) -k [api_key] (--save)
+    
+Options in round brackets are optional.
 
-## Development
+-f full_url     (full_url represents full_url to be shortened)
+-s short_url    (short_url represents custom short link. Optional. If not passed in, a unique one is generated)
+-k api_key      (api_key gotten from user account. Sign up on http://gobble-it.heroku.com for yours.)
+--save          (to save api key on your PC.)
+-h              (to show help message)
+    
+## Testing
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+To test the application, run the following command to carry out all tests:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+        $ bundle exec rake spec
+
+To view test descriptors, run the following command:
+
+        $ bundle exec rake spec -fd
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gobble. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+1. Fork it by visiting - https://github.com/andela-toduah/gobble-gem/fork
 
+2. Create your feature branch
 
-## License
+        $ git checkout -b new_feature
+    
+3. Contribute to code
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+4. Commit changes made
 
+        $ git commit -a -m 'descriptive_message_about_change'
+    
+5. Push to branch created
+
+        $ git push origin new_feature
+    
+6. Then, create a new Pull Request

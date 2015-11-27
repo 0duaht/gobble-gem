@@ -6,7 +6,7 @@ require "optparse"
 module Gobble
   module Tobi
     class Parser
-      def parse
+      def parse(args=ARGV)
         options = {}
         options[:save] = false
         optparse = OptionParser.new do |opts|
@@ -41,7 +41,7 @@ module Gobble
         
         
         begin
-          optparse.parse!
+          optparse.parse!(args)
         rescue
           puts "Argument(s) not valid. Run gobble -h for instructions."
           exit

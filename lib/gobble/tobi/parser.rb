@@ -10,10 +10,14 @@ module Gobble
         options = {}
         options[:save] = false
         optparse = OptionParser.new do |opts|
-          opts.banner = "Usage: gobble -f [full_url] (-s [short_url]) -k [api_key] (--save)\n Options in round brackets are optional\n\n"
-          details_full = "-f full_url \t(full_url represents full_url to be shortened)\n"
-          details_short = "-s short_url \t(short_url represents custom short link. Optional. If not passed in, a unique one is generated)\n"
-          details_key = "-k api_key \t(api_key gotten from user account. Sign up on http://gobble-it.heroku.com for yours.)\n"
+          opts.banner = "Usage: gobble -f [full_url] (-s [short_url]) -k "\
+            "[api_key] (--save)\n Options in round brackets are optional\n\n"
+          details_full = "-f full_url \t(full_url represents full_url to be "\
+            "shortened)\n"
+          details_short = "-s short_url \t(short_url represents custom short "\
+            "link. Optional. If not passed in, a unique one is generated)\n"
+          details_key = "-k api_key \t(api_key gotten from user account. Sign "\
+            "up on http://gobble-it.heroku.com for yours.)\n"
           details_save = "--save \t\t(to save api key on this PC.)\n"
           details_help = "-h \t\t(to show this message)\n"
           
@@ -34,7 +38,8 @@ module Gobble
           end
           
           opts.on('-h') do
-            puts opts.banner << details_full << details_short << details_key << details_save << details_help
+            puts opts.banner << details_full << details_short <<
+              details_key << details_save << details_help
             exit
           end
         end

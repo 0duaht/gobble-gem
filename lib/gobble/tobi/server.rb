@@ -18,9 +18,11 @@ module Gobble
         uri.query = URI.encode_www_form(values)
         
         res = Net::HTTP.get_response(uri)
+        
         if res.is_a?(Net::HTTPSuccess)
           actual_response = res.body
         end
+        
         actual_response 
       end
     end

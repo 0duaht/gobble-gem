@@ -27,7 +27,8 @@ module Gobble
           if options[:key]
             File.open(FILE_NAME, "w+") { |file| file.write(options[:key]) }
           else
-            puts "Save Error. Key argument required! Run gobble -h to view options"
+            puts "Save Error. Key argument required! "\
+              "Run gobble -h to view options"
             exit
           end
         end
@@ -38,9 +39,12 @@ module Gobble
           values[:key] = options[:key]
         else
           if File.exist?(FILE_NAME)
-            values[:key] = File.open(FILE_NAME, "r") { |file| file.read(options[:key]) }
+            values[:key] = File.open(FILE_NAME, "r") { |file|
+              file.read(options[:key])
+            }
           else
-            puts "No key found! Key argument required. Run gobble -h to view options"
+            puts "No key found! Key argument required. "\
+              "Run gobble -h to view options"
             exit
           end
         end

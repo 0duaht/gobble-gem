@@ -33,7 +33,7 @@ Short_url represents custom short link. Optional. If not passed in, a unique one
 
     $ -k api_key  		
     
-Api_key gotten from user account. Sign up on http://gobble-it.heroku.com for yours.)
+Api_key gotten from user account. Sign up on http://g-it.heroku.com for yours.)
 
     $ --save	   
 
